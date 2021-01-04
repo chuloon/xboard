@@ -4,6 +4,8 @@
 
     .status {
         border-right: 1px solid black;
+        height: 100vh;
+        text-align: center;
 
         &:last-child {
             border-right: none;
