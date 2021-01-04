@@ -1,0 +1,7 @@
+<div id="home-page">
+    <div id="column-container">
+        <div *ngFor="let column of columns" id={{column.id}} class="status" [ngStyle]="{ 'width': 100/columns.length + '%' }">
+            {{ column.name }}
+        </div>
+    </div>
+</div>

@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0px;
+    font-family: 'Louis Bold', sans-serif;
+}
+
+@font-face {
+    font-family: 'Louis';
+    src: url('./assets/fonts/louis.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Louis Bold';
+    src: url('./assets/fonts/louis_bold.ttf') format('truetype');
+}
