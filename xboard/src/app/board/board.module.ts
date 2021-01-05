@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { FilterCardsPipe } from './pipes/filter.pipe';
-
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 
 @NgModule({
@@ -11,7 +11,8 @@ import { FilterCardsPipe } from './pipes/filter.pipe';
     FilterCardsPipe
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    DragDropModule
   ],
   exports: [
     HomeComponent

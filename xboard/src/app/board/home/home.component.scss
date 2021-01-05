@@ -23,12 +23,15 @@
             .card {
                 border: 1px solid gray;
                 border-radius: 15px;
-                padding: 15px;
-                min-width: 125px;
-                min-height: 75px;
+                width: 140px;
+                height: 90px;
+
+                padding: 3px 7px;
 
                 margin-right: 7px;
                 margin-bottom: 7px;
+
+                text-align: left;
             }
         }
     }
