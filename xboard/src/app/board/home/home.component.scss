@@ -2,13 +2,34 @@
     display: flex;
     justify-content: space-evenly;
 
-    .status {
+    .column {
         border-right: 1px solid black;
         height: 100vh;
         text-align: center;
+        padding: 15px;
 
         &:last-child {
             border-right: none;
+        }
+
+        .title {
+            margin-bottom: 15px;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+
+            .card {
+                border: 1px solid gray;
+                border-radius: 15px;
+                padding: 15px;
+                min-width: 125px;
+                min-height: 75px;
+
+                margin-right: 7px;
+                margin-bottom: 7px;
+            }
         }
     }
 }

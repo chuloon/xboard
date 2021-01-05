@@ -1,7 +1,13 @@
 <div id="home-page">
     <div id="column-container">
-        <div *ngFor="let column of columns" id={{column.id}} class="status" [ngStyle]="{ 'width': 100/columns.length + '%' }">
-            {{ column.name }}
+        <div *ngFor="let column of columns" id={{column.id}} class="column" [ngStyle]="{ 'width': 100/columns.length + '%' }">
+            <div class="title">{{ column.name }}</div>
+
+            <div class="cards">
+                <div *ngFor="let card of cards | filterCards: column.id" class="card">
+                    Card 1
+                </div>
+            </div>
         </div>
     </div>
 </div>
