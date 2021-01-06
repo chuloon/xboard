@@ -1,11 +1,19 @@
 <div id="home-page">
     <div id="column-container">
         <div *ngFor="let column of columns" id={{column.id}} class="column" [ngStyle]="{ 'width': 100/columns.length + '%' }">
-            <div class="title">{{ column.name }}</div>
+            <div class="column-title">{{ column.name }}</div>
 
-            <div class="cards">
+            <div class="cards" dragula="CARDS">
                 <div *ngFor="let card of cards | filterCards: column.id" class="card">
-                    Card 1
+                    <div class="selector">
+                        {{ card.selector }}
+                    </div>
+                    <div class="title">
+                        {{ card.title }}
+                    </div>
+                    <div class="description">
+                        {{ card.description }}
+                    </div>
                 </div>
             </div>
         </div>

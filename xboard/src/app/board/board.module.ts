@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { FilterCardsPipe } from './pipes/filter.pipe';
-import { DragDropModule } from '@angular/cdk/drag-drop';
+import { DragulaModule } from 'ng2-dragula';
 
 
 @NgModule({
@@ -12,7 +12,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
   ],
   imports: [
     CommonModule,
-    DragDropModule
+    DragulaModule.forRoot()
   ],
   exports: [
     HomeComponent

@@ -12,27 +12,48 @@
             border-right: none;
         }
 
-        .title {
+        .column-title {
             margin-bottom: 15px;
         }
 
         .cards {
             display: flex;
             flex-wrap: wrap;
-
-            .card {
-                border: 1px solid gray;
-                border-radius: 15px;
-                width: 140px;
-                height: 90px;
-
-                padding: 3px 7px;
-
-                margin-right: 7px;
-                margin-bottom: 7px;
-
-                text-align: left;
-            }
         }
+    }
+}
+
+.card {
+    border: 1px solid gray;
+    border-radius: 15px;
+    width: 140px;
+    height: 90px;
+
+    padding: 3px 7px;
+
+    margin-right: 7px;
+    margin-bottom: 7px;
+
+    text-align: left;
+
+    .selector {
+        font-size: 12px;
+        opacity: 80%;
+        text-align: right;
+    }
+
+    .title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 0px;
+    }
+
+    .description {
+        font-size: 12px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical; 
+        overflow: hidden;
     }
 }
