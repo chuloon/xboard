@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DragulaService } from 'ng2-dragula';
+import { Subscription } from 'rxjs';
 import { Card } from '../classes/card';
 import { Column } from '../classes/column';
 
@@ -8,10 +10,21 @@ import { Column } from '../classes/column';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  subs = new Subscription;
+  columnData: any = {};
 
-  constructor() { }
+  constructor(private dragulaService: DragulaService) { }
 
   ngOnInit(): void {
+    this.columns.forEach(column => {
+      this.columnData[column.id] = this.cards.filter(card => {
+        card.status == column.id
+      });
+    });
+  }
+
+  ngOnDestroy() {
+    this.subs.unsubscribe();
   }
 
   columns: Column[] = [
@@ -34,5 +47,6 @@ export class HomeComponent implements OnInit {
     new Card(9, "Title", "Description", 2, "backlog", "NM-9"),
     new Card(0, "Title", "Description", 2, "done", "NM-0"),
   ];
+
 
 }

@@ -3,7 +3,7 @@
         <div *ngFor="let column of columns" id={{column.id}} class="column" [ngStyle]="{ 'width': 100/columns.length + '%' }">
             <div class="column-title">{{ column.name }}</div>
 
-            <div class="cards" dragula="CARDS">
+            <div class="cards" dragula="CARDS" [(dragulaModel)]="columnData[column.id]" [id]="column.id">
                 <div *ngFor="let card of cards | filterCards: column.id" class="card">
                     <div class="selector">
                         {{ card.selector }}
